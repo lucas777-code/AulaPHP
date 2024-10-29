@@ -1,0 +1,40 @@
+body{
+    font-family: 'Courier New', Courier, monospace;
+    display: center;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: dodgerblue;
+    text-align: center;
+
+}
+
+.message{
+    font-size: 2em;
+    color: aliceblue;
+    padding: 20px;
+    border: 2px solid #800000;
+    border-radius: 8px;
+    background-color: magenta;
+    text-align: center;
+
+}
+
+.moving-text {
+    position: absolute;
+    font-size: 24px;
+    animation: moveText 30s linear infinite; /* Duração, tipo de animação, repetição */
+}
+
+@keyframes moveText {
+    0% {
+        transform: translateX(100%); /* Começa fora da tela à direita */
+    }
+    50% {
+        transform: translateX(-100%); /* Vai para fora da tela à esquerda */
+    }
+    100% {
+        transform: translateX(100%); /* Retorna para fora da tela à direita */
+    }
+}
